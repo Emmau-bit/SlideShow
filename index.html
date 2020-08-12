@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Image SlideShow</title>
+    <link rel="icon" href="T.jpg" />
+    <style>
+      .slideshow {
+        margin: 0 auto;
+        padding-top: 50px;
+        height: 640px;
+        box-sizing: border-box;
+      }
+      .copy {
+        margin-top: 21rem;
+        text-align: center;
+      }
+      .info {
+        color: blue;
+        font-size: 1.3rem;
+      }
+      .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        overflow: hidden;
+      }
+      .bg-video__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .title {
+        text-align: center;
+        font-style: italic;
+        font-size: 2.5rem;
+      }
+      .content {
+        margin: auto;
+        width: 190px;
+        perspective: 1000px;
+        position: relative;
+        padding-top: 80px;
+      }
+      .content-carrouse1 {
+        width: 100%;
+        position: absolute;
+        float: right;
+        animation: rotar 40s infinite linear;
+        transform-style: preserve-3d;
+      }
+      .content-carrouse1:hover {
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+      .content-carrouse1 figure {
+        width: 100%;
+        height: 120px;
+        border: 1px solid #4d444d;
+        overflow: hidden;
+        position: absolute;
+      }
+      .content-carrouse1 figure:nth-child(1) {
+        transform: rotateY(0deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(2) {
+        transform: rotateY(40deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(3) {
+        transform: rotateY(80deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(4) {
+        transform: rotateY(120deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(5) {
+        transform: rotateY(160deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(6) {
+        transform: rotateY(200deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(7) {
+        transform: rotateY(240deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(8) {
+        transform: rotateY(280deg) translateZ(300px);
+      }
+      .content-carrouse1 figure:nth-child(9) {
+        transform: rotateY(320deg) translateZ(300px);
+      }
+      .shadow {
+        position: absolute;
+        box-shadow: 0px 0px 20px 0px #000;
+        border-radius: 2px;
+      }
+      .content-carrouse1 img {
+        image-rendering: auto;
+        transition: all 300ms;
+        width: 100%;
+        height: 100%;
+      }
+      .content-carrouse1 img:hover {
+        transform: scale(1.2);
+        transition: all 300ms;
+      }
+      @keyframes rotar {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slideshow">
+      <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+          <source src="video.mp4" type="video/mp4" />
+          <source src="video.webm" type="video/webm" />
+          Your browser is not supported!
+        </video>
+      </div>
+      <h1 class="title">The 9 Best Players Of Manchester United In 2020</h1>
+      <div class="content">
+        <div class="content-carrouse1">
+          <figure class="shadow"><img src="1.webp" /></figure>
+          <figure class="shadow"><img src="2.jpg" /></figure>
+          <figure class="shadow"><img src="3.jpg" /></figure>
+          <figure class="shadow"><img src="4.jpg" /></figure>
+          <figure class="shadow"><img src="5.jpg" /></figure>
+          <figure class="shadow"><img src="6.jpg" /></figure>
+          <figure class="shadow"><img src="7.jpg" /></figure>
+          <figure class="shadow"><img src="8.jpg" /></figure>
+          <figure class="shadow"><img src="9.jpg" /></figure>
+        </div>
+      </div>
+      <p class="copy">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        All rights reserved |
+        <a
+          href="https://www.linkedin.com/in/ishimwe-emmanuel-758377195/"
+          class="info"
+          target="_blank"
+          >Ishimwe Emmanuel
+        </a>
+      </p>
+    </section>
+  </body>
+</html>
